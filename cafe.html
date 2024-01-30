@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cafe</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+            padding: 0;
+        }
+
+        .list {
+            font-family: Inconsolata, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            color: white;
+        }
+
+        .main2 {
+            height: 80vh;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            background-image: url(coffeehouse.jpg);
+            background-position: center;
+            background-size: cover;
+            /* border: 1px solid; */
+        }
+
+        .smallbox {
+            height: 25vh;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 40%;
+            margin-top: 80px;
+            /* border: 1px solid; */
+        }
+
+        .text {
+            font-family: Inconsolata, sans-serif;
+            font-size: 90px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .smallbox2 {
+            height: 4vh;
+            width: 15%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 3%;
+            background-color: black;
+            /* border: 1px solid; */
+
+        }
+
+        .text2 {
+            font-family: Inconsolata, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .bigmain {
+            height: auto;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+
+        }
+
+        .childbox1 {
+            height: 100vh;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+
+        .childbox2 {
+            height: 6vh;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            /* border: 1px solid; */
+        }
+
+        .text3 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .para {
+            padding-left: 15px;
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 40px;
+        }
+
+        .childbox3 {
+            height: 30vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .childbox4 {
+            height: 20vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .childbox5 {
+            height: 25vh;
+            width: 100%;
+            background-color: rgb(241, 241, 241);
+            border-left: 3px solid rgb(172, 170, 170);
+        }
+
+        .childbox6 {
+            height: 90vh;
+            width: 60%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            /* border: 1px solid; */
+        }
+
+        .imgbox {
+            height: 65vh;
+            width: 100%;
+            background-image: url(./jscafe/coffeeshop.jpg);
+            background-position: center;
+            background-size: cover;
+            filter: grayscale(80%);
+            /* border: 1px solid; */
+        }
+
+        .textbox {
+            height: 20vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* border: 1px solid; */
+        }
+
+        .box {
+            height: 7vh;
+            width: 60%;
+            display: flex;
+            /* border: 1px solid; */
+        }
+
+        .spn {
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: rgb(6, 6, 6);
+        }
+
+        .text4 {
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+            color: rgb(6, 6, 6);
+        }
+
+        .box2 {
+            height: 7vh;
+            width: 45%;
+            display: flex;
+            /* border: 1px solid; */
+        }
+
+        .childbox7 {
+            height: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            align-items: center;
+            gap: 10px;
+            box-shadow: 2px 5px 15px 2px gray;
+            /* border: 1px solid; */
+        }
+
+        .box3 {
+            height: 6vh;
+            width: 25%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            background-color: black;
+            /* border: 1px solid; */
+        }
+
+        .text6 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .box4 {
+            height: 7vh;
+            width: 100%;
+            display: flex;
+            /* border: 1px solid; */
+        }
+
+        .bt {
+            height: 6vh;
+            width: 50%;
+        }
+
+        .box5 {
+            height: auto;
+            width: 100%;
+            /* background-color: red; */
+            /* border: 1px solid red; */
+        }
+
+        .long {
+            height: 15vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding-left: 12px;
+            /* border: 1px solid; */
+        }
+
+        .text5 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .para2 {
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: rgb(168, 166, 166);
+
+        }
+
+        .childbox8 {
+            height: 80vh;
+            width: 60%;
+            background-image: url(https://www.w3schools.com/w3images/coffeehouse2.jpg);
+            background-position: center;
+            background-size: cover;
+            margin-top: 50px;
+            /* border: 1px solid; */
+        }
+
+        .childbox9 {
+            height: 90vh;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .box6 {
+            height: 6vh;
+            width: 30%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+            /* border: 1px solid; */
+        }
+
+        .text7 {
+            font-family: "Segoe UI", Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            color: white;
+        }
+
+        .box7 {
+            height: 70vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            /* border: 1px solid; */
+        }
+
+        .box8 {
+            height: 7vh;
+            width: 50%;
+            display: flex;
+            /* justify-content: center; */
+            align-items: center;
+            /* border: 1px solid; */
+        }
+
+        .text8 {
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+
+        .box9 {
+            height: 60vh;
+            width: 100%;
+            background-image: url(https://www.w3schools.com/w3images/map.jpg);
+            background-position: center;
+            background-size: cover;
+            /* border: 1px solid red; */
+        }
+
+        .childbox10 {
+            height: auto;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            /* justify-content: space-around; */
+            gap: 10px;
+            /* border: 1px solid; */
+        }
+
+        .box10 {
+            height: 10vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .para3 {
+            font-family: Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+        }
+
+        .box11 {
+            height: 10vh;
+            width: 100%;
+            /* border: 1px solid; */
+        }
+
+        .childbox11 {
+            height: 70vh;
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /* border: 1px solid; */
+        }
+
+        #inp {
+            height: 10vh;
+            width: 100%;
+            padding-left: 10px;
+        }
+
+        .snd {
+            height: 7vh;
+            width: 15%;
+            color: white;
+            background-color: black;
+            border: none;
+        }
+
+        .childbox12 {
+            height: 20vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: rgb(241, 241, 241);
+            /* border: 1px solid; */
+        }
+        .lastbox{
+            height: 10vh;
+            width: 20%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* border: 1px solid; */
+        }
+        .text9{
+            font-family:  Inconsolata, sans-serif;
+            font-size: 18px;
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="main">
+
+        <div class="div">
+            <li class="list">HOME</li>
+        </div>
+        <div class="div1">
+            <li class="list">ABOUT</li>
+        </div>
+        <div class="div2">
+            <li class="list">MENU</li>
+        </div>
+        <div class="div3">
+            <li class="list">WHERE</li>
+        </div>
+    </div>
+
+    <div class="main2">
+
+        <div class="smallbox">
+            <h1 class="text">the
+                Cafe</h1>
+        </div>
+        <div class="smallbox2">
+            <h2 class="text2">
+                Open from 6am to 5pm
+            </h2>
+        </div>
+    </div>
+
+    <div class="bigmain">
+        <div class="childbox1">
+            <div class="childbox2">
+                <h1 class="text3">ABOUT THE CAFE</h1>
+            </div>
+            <div class="childbox3">
+                <p class="para">The Cafe was founded in blabla by Mr. Smith in lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                    veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            </div>
+            <div class="childbox4">
+                <p class="para">In addition to our full espresso and brew bar menu, we serve fresh made-to-order
+                    breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff..
+                </p>
+            </div>
+            <div class="childbox5">
+                <p class="para">"Use products from nature for what it's worth - but never too early, nor too late."
+                    Fresh is the new sweet. <br> <br>
+
+                    Chef, Coffeeist and Owner: Liam Brown</p>
+            </div>
+        </div>
+
+        <div class="childbox6">
+
+            <div class="imgbox"></div>
+            <div class="textbox">
+                <div class="box">
+                    <span class="spn">Opening hours:</span>
+                    <h1 class="text4">everyday from 6am to 5pm.</h1>
+                </div>
+                <div class="box2">
+                    <span class="spn">Address: </span>
+                    <h1 class="text4">15 Adr street, 5015, NY</h1>
+                </div>
+            </div>
+        </div>
+
+        <div class="childbox7">
+            <div class="box3">
+                <h1 class="text6">THE MENU</h1>
+            </div>
+            <div class="box4">
+                <button class="bt">Eat</button>
+                <button class="bt">Drink</button>
+            </div>
+            <div class="box5">
+                <div class="long">
+                    <h1 class="text5">Bread Basket</h1>
+                    <p class="para2">Assortment of fresh baked fruit breads and muffins 5.50</p>
+                </div>
+                <div class="long">
+                    <h1 class="text5">Honey Almond Granola with Fruits</h1>
+                    <p class="para2">Vanilla flavored batter with malted flour 7.50</p>
+                </div>
+                <div class="long">
+                    <h1 class="text5">Scrambled eggs</h1>
+                    <p class="para2">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p>
+                </div>
+                <div class="long">
+                    <h1 class="text5">Blueberry Pancakes</h1>
+                    <p class="para2">With syrup, butter and lots of berries 8.50</p>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="childbox8"></div>
+        <div class="childbox9">
+            <div class="box6">
+                <h1 class="text7">WHERE TO FIND US</h1>
+            </div>
+            <div class="box7">
+                <div class="box8">
+                    <h1 class="text8">Find us at some address at some place.</h1>
+                </div>
+                <div class="box9"></div>
+            </div>
+
+        </div>
+        <div class="childbox10">
+            <div class="box10">
+                <p class="para3">
+                    FYI! We offer full-service catering for any event, large or small. We understand your needs and we
+                    will cater the food to satisfy the biggerst criteria of them all, both look and taste.
+                </p>
+            </div>
+            <div class="box11">
+                <p class="para3">
+                    Reserve a table, ask for today's special or just send us a message:
+                </p>
+            </div>
+        </div>
+        <div class="childbox11">
+            <input placeholder="Name" name="" id="inp">
+            <input placeholder="How many people" name="" id="inp">
+            <input placeholder="11/16/2020 08:00 PM" name="" id="inp">
+            <input placeholder="Message \ Special requirements
+            " name="" id="inp">
+            <button class="snd">SEND MESSAGE</button>
+        </div>
+        <div class="childbox12">
+            <div class="lastbox">
+                <h1 class="text9">Powered by w3.css</h1>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        let main = document.getElementsByClassName("main")[0]
+
+        console.log(main);
+
+
+        main.style.height = "10vh"
+        main.style.width = "100%"
+        main.style.display = "flex"
+        main.style.justifyContent = "space-around"
+        main.style.alignItems = "center"
+        main.style.background = "black"
+        main.style.border = "1px solid"
+
+
+
+
+        let div = document.querySelectorAll(".div")[0]
+
+        console.log(div);
+
+
+        div.style.height = "9vh"
+        div.style.width = "15%"
+        // div.style.background = "red"
+        div.style.border = "1px solid"
+
+
+        let list = document.getElementsByClassName("list")[0]
+
+        console.log(list);
+
+        let div1 = document.querySelectorAll(".div1")[0]
+
+        console.log(div1);
+
+
+        div1.style.height = "9vh"
+        div1.style.width = "15%"
+        // div1.style.background = "red"
+        div1.style.border = "1px solid"
+
+
+        let div2 = document.querySelectorAll(".div2")[0]
+
+        console.log(div2);
+
+
+        div2.style.height = "9vh"
+        div2.style.width = "15%"
+        // div2.style.background = "red"
+        div2.style.border = "1px solid"
+
+
+        let div3 = document.querySelectorAll(".div3")[0]
+
+        console.log(div3);
+
+
+        div3.style.height = "9vh"
+        div3.style.width = "15%"
+        // div3.style.background = "red"
+        div3.style.border = "1px solid"
+
+
+
+        let main2 = document.getElementsByClassName("main2")[0]
+
+        console.log(main2);
+
+        let smallbox = document.getElementsByClassName("smallbox")
+
+        console.log(smallbox);
+
+        let text = document.getElementsByClassName("text")
+
+        console.log(text);
+
+
+
+        let smallbox2 = document.getElementsByClassName("smallbox2")
+
+        console.log(smallbox2);
+
+        let text2 = document.getElementsByClassName("text2")
+
+        console.log(text2);
+
+
+
+
+        let bigmain = document.getElementsByClassName("bigmain")[0]
+
+        console.log(bigmain);
+
+        let childbox1 = document.getElementsByClassName("childbox1")
+
+        console.log(childbox1);
+
+
+
+        let childbox2 = document.getElementsByClassName("childbox2")
+        console.log(childbox2);
+
+
+        let text3 = document.getElementsByClassName("text3")
+        console.log(text3);
+
+
+        let childbox3 = document.getElementsByClassName("childbox3")
+        console.log(childbox3);
+
+        let para = document.getElementsByName("para")
+        console.log(para);
+        let childbox4 = document.getElementsByClassName("childbox4")
+        console.log(childbox4);
+
+
+        let childbox5 = document.getElementsByClassName("childbox5")
+        console.log(childbox5);
+
+
+
+        let childbox6 = document.getElementsByClassName("childbox6")
+        console.log(childbox6);
+
+        let imgbox = document.getElementsByClassName("imgbox")
+
+        console.log(imgbox);
+
+
+        let textbox = document.getElementsByClassName("textbox")
+        console.log(textbox);
+
+        let box = document.getElementsByClassName("box")
+        console.log(box);
+
+        let spn = document.getElementsByClassName("spn")
+        console.log(spn);
+
+        let text4 = document.getElementsByClassName("text4")
+        console.log(text4);
+
+        let box2 = document.getElementsByClassName("box2")
+        console.log(box2);
+
+
+        let childbox7 = document.getElementsByClassName("childbox7")
+        console.log(childbox7);
+
+
+        let box3 = document.getElementsByClassName("box3")
+        console.log(box3);
+
+
+        let box4 = document.getElementsByClassName("box4")
+        console.log(box4);
+
+        let bt = document.getElementsByClassName("bt")
+        console.log(bt);
+
+
+
+
+        let box5 = document.getElementsByClassName("box5")
+        console.log(box5);
+
+
+        let long = document.getElementsByClassName("long")
+        console.log(long);
+
+        let text5 = document.getElementsByClassName("text5")
+        console.log(text5);
+
+
+        let para2 = document.getElementsByClassName("para2")
+        console.log(para2);
+
+        let text6 = document.getElementsByClassName("text6")
+        console.log(text6);
+
+        let childbox8 = document.getElementsByClassName(" childbox8")
+        console.log(childbox8);
+
+
+        let childbox9 = document.getElementsByClassName(" childbox9")
+        console.log(childbox9);
+
+        let box6 = document.getElementsByClassName("box6")
+        console.log(box6);
+
+        let text7 = document.getElementsByClassName("text7")
+        console.log(text7);
+
+        let box7 = document.getElementsByClassName("box7")
+        console.log(box7);
+
+        let box8 = document.getElementsByClassName("box8")
+        console.log(box8);
+
+        let box9 = document.getElementsByClassName("box9")
+        console.log(box9);
+
+        let childbox10 = document.getElementsByClassName("childbox10")
+        console.log(childbox10);
+
+        let box10 = document.getElementsByClassName("box10")
+        console.log(box10);
+
+        let para3 = document.getElementsByClassName("para3")
+        console.log(para3);
+
+        let box11 = document.getElementsByClassName("box11")
+        console.log(box11);
+
+        let childbox11 = document.getElementsByClassName("childbox11")
+        console.log(childbox11);
+
+        let childbox12 = document.getElementsByClassName("childbox12")
+        console.log(childbox12);
+
+
+        let lastbox = document.getElementsByClassName("lastbox")
+        console.log(lastbox);
+    </script>
+
+
+</body>
+
+</html>
